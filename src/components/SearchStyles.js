@@ -1,39 +1,57 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  position: relative;
-  width: 100px;
-  height: 50px;
-  box-sizing: border-box;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: row;
+  align-items: center;
+  position: absolute;
+  width: 297px;
+  height: 55px;
+  left: 1047px;
+  top: 32px;
 
-  &:hover {
+  background: #ffffff;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+
+  /* &:hover {
     color: red;
     width: 500px;
-  }
+  } */
 `;
 
-export const InputsContainer = styled.div`
+export const InputCity = styled.div`
   position: relative;
-  width: 100px;
-  height: 50px;
-  box-sizing: border-box;
+  width: 106px;
+  height: 18px;
+
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height */
+
+  color: #333333;
 `;
 
-export const InputBar = styled.input`
+export const InputGuest = styled.div`
   position: relative;
-  line-height: 30px;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50px;
-  font-size: 2rem;
+  width: 74px;
+  height: 18px;
+
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height */
+
+  color: #bdbdbd;
 `;
 
-export const SearchButton = styled.button`
-  color: red;
+export const SearchButton = styled.div`
+  position: relative;
 
+  background: #eb5757;
 `;

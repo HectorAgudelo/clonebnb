@@ -1,20 +1,21 @@
 import React from 'react';
-import { Container, InputBar, InputsContainer, SearchButton } from './SearchStyles';
+import {
+  Container,
+  InputGuest,
+  InputCity,
+  SearchButton,
+} from './SearchStyles';
 
 export const Search = () => {
   return (
-    <>
+    
       <Container>
-        <InputsContainer>
-          <InputBar />
-        </InputsContainer>
-        <InputsContainer>
-          <InputBar />
-        </InputsContainer>
-        <InputsContainer>
-          <SearchButton>Search</SearchButton>
-        </InputsContainer>
+      
+          <InputCity>Helsinki, Finland</InputCity>
+          <InputGuest>Add Guest</InputGuest>
+          <SearchButton>press</SearchButton>
+       
       </Container>
-    </>
+    
   );
 };
