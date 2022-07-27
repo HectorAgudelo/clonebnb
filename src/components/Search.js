@@ -4,6 +4,7 @@ import {
   InputGuest,
   InputCity,
   SearchButton,
+  Divider
 } from './SearchStyles';
 
 export const Search = () => {
@@ -12,6 +13,7 @@ export const Search = () => {
       <Container>
       
           <InputCity>Helsinki, Finland</InputCity>
+          <Divider></Divider>
           <InputGuest>Add Guest</InputGuest>
           <SearchButton>press</SearchButton>
        
