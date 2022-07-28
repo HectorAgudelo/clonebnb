@@ -1,23 +1,24 @@
 import React from 'react';
 import {
   Container,
-  InputGuest,
-  InputCity,
+
+  Input,
   SearchButton,
-  Divider
+  Divider,
 } from './SearchStyles';
 
 export const Search = () => {
   return (
-    
-      <Container>
-      
-          <InputCity>Helsinki, Finland</InputCity>
-          <Divider></Divider>
-          <InputGuest>Add Guest</InputGuest>
-          <SearchButton>press</SearchButton>
-       
-      </Container>
-    
+    <Container>
+      <Input width='106px' left='16px' color='#333333'>
+        Helsinki, Finland
+      </Input>
+      <Divider left='106px'></Divider>
+      <Input width='74px' left='154px' color='#bdbdbd'>
+        Add Guest
+      </Input>
+      <Divider right='19px'></Divider>
+      <SearchButton><span style={{color:"#EB5757"}} class="material-icons">search</span></SearchButton>
+    </Container>
   );
 };
