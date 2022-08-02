@@ -5,9 +5,9 @@ import {
 } from './SearchNavStyle'
 
 
-export const SearchNav = () =>{
+export const SearchNav = ({closeInput}) =>{
     return (
-        <ExpandSearchContainer>
+        <ExpandSearchContainer onClick={()=>closeInput(false)}>
             Expanded Navigation Bar
         </ExpandSearchContainer>
     )

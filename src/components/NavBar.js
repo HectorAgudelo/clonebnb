@@ -8,9 +8,9 @@ import {
   Divider,
 } from './NavBarStyles';
 
-export const NavBar = () => {
+export const NavBar = ({showInput}) => {
   return (
-    <NavBarContainer>
+    <NavBarContainer onClick={()=>showInput(true)}>
       <Logo />
       <SearchContainer>
         <Input width='106px' left='16px' color='#333333'>
