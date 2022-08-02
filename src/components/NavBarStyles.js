@@ -21,8 +21,8 @@ export const Logo = styled.img.attrs({
 position: absolute;
 top: 49px;
 left: 94px;
-width: 80px;
-height: 18px;
+width: auto;
+height: 20px;
 
 `
 
@@ -33,7 +33,8 @@ export const SearchContainer = styled.div`
   align-items: center;
   width: 297px;
   height: 55px;
-  left: 1047px;
+
+  right: 96px;
   top: 32px;
   background: #ffffff;
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
