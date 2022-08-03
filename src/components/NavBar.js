@@ -10,9 +10,9 @@ import {
 
 export const NavBar = ({showInput}) => {
   return (
-    <NavBarContainer onClick={()=>showInput(true)}>
+    <NavBarContainer >
       <Logo />
-      <SearchContainer>
+      <SearchContainer onClick={()=>showInput(true)}>
         <Input width='106px' left='16px' color='#333333'>
           Helsinki, Finland
         </Input>

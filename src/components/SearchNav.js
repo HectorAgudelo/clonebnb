@@ -9,6 +9,8 @@ export const SearchNav = ({closeInput}) =>{
     return (
         <ExpandSearchContainer onClick={()=>closeInput(false)}>
             Expanded Navigation Bar
+           
         </ExpandSearchContainer>
+        
     )
 }
