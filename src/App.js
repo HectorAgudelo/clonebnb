@@ -1,20 +1,14 @@
-import React,{useState} from 'react';
-import {NavBar} from './components/NavBar'
-import {SearchNav} from './components/SearchNav'
+
 import './App.css';
 
 
 
 
 function App() {
-
-  const [showSearchNav, setShowSearchNav] = useState(false)
-
   return (
     <div className="App">
-      <NavBar showInput={setShowSearchNav}/> 
-      {showSearchNav ? 
-      <SearchNav closeInput={setShowSearchNav}/> : ""}
+      <p className="font-bold text-red-800"> Hello world</p>
+     
     </div>
   );
 }
