@@ -5,6 +5,8 @@ import { FaSearch } from 'react-icons/fa';
 
 export const NavBar = () => {
   const [navOpen, setNavOpen] = useState(false);
+  const [openCity, setOpenCity] = useState(false);
+  const [numberPeople, setNumberPeople] = useState(false);
 
   return (
     <div className='flex flex-row justify-between py-4 px-16 items-center'>
@@ -30,18 +32,32 @@ export const NavBar = () => {
         </div>
       </div>
       {navOpen ? (
-        <div className='flex m-auto w-full justify-center'>
+        <div className='flex m-auto w-full justify-center relative'>
           <OutsideClickHandler
             onOutsideClick={() => {
               setNavOpen(false);
+              setNumberPeople(false);
+              setOpenCity(false)
             }}
           >
             <div className='flex justify-center items-center'>
-              <div className='flex flex-row justify-center items-center'>
-                <div className=' border-zinc-200 border-y-2 border-l-2 rounded-l-2xl py-3 pl-3 pr-40 cursor-pointer'>
+              <div className='flex justify-center items-center'>
+                <div
+                  className=' border-zinc-200 border-y-2 border-l-2 rounded-l-2xl py-3 pl-3 pr-40 cursor-pointer'
+                  onClick={() => {
+                    setOpenCity(true);
+                    setNumberPeople(false);
+                  }}
+                >
                   <p>Helsinki, Finland</p>
                 </div>
-                <div className=' border-y-zinc-200 border-2 py-3 pl-3 pr-40 cursor-pointer'>
+                <div
+                  className=' border-y-zinc-200 border-2 py-3 pl-3 pr-40 cursor-pointer'
+                  onClick={() => {
+                    setNumberPeople(true);
+                    setOpenCity(false);
+                  }}
+                >
                   <p>Add Guest</p>
                 </div>
                 <div className=' border-x-zinc-200 border-y-2 border-r-2 rounded-r-2xl py-0 px-20'>
@@ -55,6 +71,25 @@ export const NavBar = () => {
           </OutsideClickHandler>
         </div>
       ) : null}
+      {openCity && (
+        <div className='absolute top-20 right-2/3'>
+          <ul className='mr-10'>
+            <li className=''>cities will go here</li>
+            <li>cities will go here</li>
+            <li>cities will go here</li>
+          </ul>
+        </div>
+      )}
+
+      {numberPeople && (
+        <div className='absolute top-20 right-1/3'>
+          <ul className='mr-28'>
+            <li className=''>amount of people will go here</li>
+            <li>amount of people will go here</li>
+            <li>amount of people will go here</li>
+          </ul>
+        </div>
+      )}
     </div>
   );
 };
